@@ -38,19 +38,18 @@ All resource names include a randomly generated suffix to ensure uniqueness. The
 
 
 **Explanation of the Terraform Code**
-**1. Providers Configuration**
 
+  # Configuration options
+**1. Providers Configuration**
+Configures the Azure Resource Manager (azurerm) provider, enabling Terraform to interact with Azure resources.
 provider "azurerm" {
   features {}
 }
-Configures the Azure Resource Manager (azurerm) provider, enabling Terraform to interact with Azure resources.
+
 
 provider "random" {
-  # Configuration options
 }
 Configures the Random provider, used for generating random values.
-
-**2. Generate Random Strings for Naming**
 
 resource "random_string" "suffix" {
   length  = 8
