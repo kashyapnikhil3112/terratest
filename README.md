@@ -46,7 +46,7 @@ provider "azurerm" {
   features {}
 }
 
-
+**2. Random provider**
 provider "random" {
 }
 Configures the Random provider, used for generating random values.
